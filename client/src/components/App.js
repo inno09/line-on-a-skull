@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes , Route } from "react-router-dom";
 import Dashboard from "./dashboard";
 import Home from "./home";
 import axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import Registration from "../auth/Registration";
 
 export default class App extends Component {
@@ -68,7 +68,7 @@ export default class App extends Component {
     return (
       <div className="app">
         <BrowserRouter>
-          <Switch>
+          <Routes>
             <Route
               exact
               path={"/"}
@@ -102,7 +102,7 @@ export default class App extends Component {
                 />
               )}
             />
-          </Switch>
+          </Routes>
         </BrowserRouter>
       </div>
     );
